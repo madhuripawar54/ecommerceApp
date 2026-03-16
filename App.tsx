@@ -1,13 +1,12 @@
 
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import Home from './src/screens/Home';
-import { View } from 'react-native';
+import AppNavigator from './src/navigation/AppNavigator';
 
 function App() {
 
   return (
     <SafeAreaProvider>
-      <Home />
+      <AppNavigator/>
     </SafeAreaProvider>  
     // <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor:'red',height:500}}></View>
   );

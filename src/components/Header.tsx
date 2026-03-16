@@ -1,9 +1,6 @@
-import { SafeAreaView } from "react-native-safe-area-context"
-import { Image, StyleSheet, Text, View } from "react-native";
-import ProfilePic from "./ProfilePic"
-import { appImages } from "../utils/appImages";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
 import { useThemeStore } from "../store/theme.store";
-import { useNavigation } from '@react-navigation/native';
 import { scaleHeight, scaleWidth } from "../utils/responsive";
 import Icons from "../commonConfig/Icons";
 
@@ -35,6 +32,20 @@ const Header: React.FC<Props> = ({ userName }) => {
           <Text variant="headerTitle" style={styles.name}>{userName}</Text>
         </View>
       </View>
+      <TouchableOpacity
+        style={styles.moreNotify}
+        onPress={() => {}}
+        activeOpacity={0.7}
+      >
+        <Icons.NotiIcon />
+        {/* {unreadCount() > 0 && (
+          <View style={styles.badge}>
+            <Text style={styles.badgeText}>
+              {unreadCount() > 9 ? '9+' : unreadCount()}
+            </Text>
+          </View>
+        )} */}
+      </TouchableOpacity>
         </View>
     )
 }

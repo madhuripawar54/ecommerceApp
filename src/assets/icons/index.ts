@@ -14,7 +14,7 @@ import TshirtIcon from './tshirt.svg';
 
 export const ProductIcons: Record<string, any> = {
   watch: Watch,
-   nike: Nike,
+  nike: Nike,
   airpods: Airpods,
   tv: Tv,
   hoodie: Hoodie,

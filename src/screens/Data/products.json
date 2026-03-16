@@ -1,0 +1,102 @@
+{
+  "featured": [
+    {
+      "id": 1,
+      "name": "Watch",
+      "price": 40,
+      "image": "watch",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.5,
+      "reviews": 128,
+      "description": "Premium smart watch with elegant design and long battery life.",
+      "sizes": [38, 40, 42]
+    },
+    {
+      "id": 2,
+      "name": "Nike Shoes",
+      "price": 430,
+      "image": "nike",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.8,
+      "reviews": 342,
+      "description": "Culpa aliquam consequuntur veritatis at consequuntur praesentium beatae temporibus nobis. Velit dolorem facilis neque autem. Itaque voluptatem expedita qui eveniet id veritatis eaque. Blanditiis quia placeat nemo. Nobis laudantium nesciunt perspiciatis sit eligendi.",
+      "sizes": [7, 8, 9, 10]
+    },
+    {
+      "id": 3,
+      "name": "Airpods",
+      "price": 333,
+      "image": "airpods",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.6,
+      "reviews": 210,
+      "description": "Wireless earbuds with noise cancellation and crystal clear sound.",
+      "sizes": []
+    }
+  ],
+  "popular": [
+    {
+      "id": 4,
+      "name": "LG TV",
+      "price": 330,
+      "image": "tv",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.4,
+      "reviews": 98,
+      "description": "Ultra HD Smart TV with immersive display and surround sound.",
+      "sizes": [43, 50, 55]
+    },
+    {
+      "id": 5,
+      "name": "Hoodie",
+      "price": 50,
+      "image": "hoodie",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.2,
+      "reviews": 76,
+      "description": "Comfortable cotton hoodie perfect for casual wear.",
+      "sizes": [ "S", "M", "L", "XL" ]
+    },
+    {
+      "id": 6,
+      "name": "Jacket",
+      "price": 400,
+      "image": "jacket",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.7,
+      "reviews": 189,
+      "description": "Stylish winter jacket with premium insulation.",
+      "sizes": [ "M", "L", "XL" ]
+    },
+    {
+      "id": 7,
+      "name": "Tshirt",
+      "price": 556,
+      "image": "girlIcon",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.1,
+      "reviews": 64,
+      "description": "Trendy printed t-shirt made from breathable fabric.",
+      "sizes": [ "S", "M", "L" ]
+    },
+    {
+      "id": 8,
+      "name": "Tshirt",
+      "price": 660,
+      "image": "tShirtIcon",
+      "love": "love",
+      "plusicon": "plusicon",
+      "rating": 4.3,
+      "reviews": 112,
+      "description": "Premium quality t-shirt with modern fit.",
+      "sizes": [ "M", "L", "XL" ]
+    }
+  ]
+}

@@ -1,44 +1,41 @@
 import React from "react";
-import { View, TextInput, StyleSheet, Image } from "react-native";
-import { appColors } from "../utils/appColors";
-import { appImages } from "../utils/appImages";
+import {  StyleSheet } from "react-native";
+import Input from "./Input";
+import Icons from "../commonConfig/Icons";
+import { scaleHeight, scaleWidth } from "../utils/responsive";
 
-const SearchBar = () => {
+interface Props {
+  value: string;
+  onChange: (text: string) => void;
+   containerStyle?: any;
+
+}
+
+const SearchBar: React.FC<Props> = ({ value, onChange}) => {
+
   return (
-    <View style={styles.container}>
-        <Image
-        source={appImages.searchIcon}
-        style={styles.icon}
-        />      
-        <TextInput
-        placeholder="Search..."
-        placeholderTextColor="#9CA3AF"
-        style={styles.input}
+        <Input
+        value={value}
+        onChangeText={onChange}
+        placeholder="Search here"
+        leftIcon={<Icons.SearchBox />}
+        containerStyle={[styles.container]}
+        autoCorrect={false}
+        returnKeyType="search"
       />
-    </View>
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    alignItems: "center",
-    borderRadius: 20,
-    paddingHorizontal: 12,
-    height: 45,
-    marginTop: 15,
-    backgroundColor: appColors.appBackground,
-  },
-  icon: {
-    width: 18,
-    height: 18,
-    marginRight: 8,
-    resizeMode: 'contain',
-  },
-  input: {
-    flex: 1,
-    fontSize: 15,
-    color: appColors.primaryText,
+      marginHorizontal: scaleWidth(16),
+      marginTop: scaleHeight(20),
+      paddingHorizontal: scaleWidth(12),
+      height: scaleHeight(48),
+      borderRadius: 30,
+      flexDirection: 'row',
+      alignItems: 'center'
   },
 });
 

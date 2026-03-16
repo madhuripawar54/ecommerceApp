@@ -4,11 +4,11 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  Image,
   Dimensions,
 } from "react-native";
 import { appColors } from "../utils/appColors";
-import { appImages } from "../utils/appImages";
+import Icons from '../commonConfig/Icons';
+import { scaleHeight, scaleWidth } from "../utils/responsive";
 
 const { width } = Dimensions.get("window");
 
@@ -18,14 +18,12 @@ const banners = [
     title: "Get Winter Discount",
     highlight: "20% Off",
     subtitle: "For Children",
-    image: appImages.profilePic,
   },
   {
     id: "2",
     title: "New Collection",
     highlight: "30% Off",
     subtitle: "Limited Time",
-    image: appImages.profilePic,
   },
 ];
 
@@ -37,7 +35,7 @@ const BannerSlider = () => {
   }).current;
 
   return (
-    <View>
+    <View style={{marginTop:scaleHeight(10)}}>
       <FlatList
         data={banners}
         horizontal
@@ -50,10 +48,12 @@ const BannerSlider = () => {
             <View style={styles.textContainer}>
               <Text style={styles.title}>{item.title}</Text>
               <Text style={styles.highlight}>{item.highlight}</Text>
-              <Text style={styles.subtitle}>{item.subtitle}</Text>
+              <Text style={styles.title}>{item.subtitle}</Text>
             </View>
 
-            <Image source={item.image} style={styles.image} />
+            <View style={styles.imageWrapper}>
+                <Icons.Banner width="100%" height="100%" />
+            </View>
           </View>
         )}
       />
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     borderRadius: 24,
     padding: 20,
-    backgroundColor: "#5E5CE6",
+    backgroundColor: appColors.bannerBackgroundColor,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -122,6 +122,12 @@ const styles = StyleSheet.create({
   },
   activeDot: {
     backgroundColor: appColors.bannerBackgroundColor,
+  },
+  imageWrapper: {
+    width: scaleWidth(89),
+    height: scaleHeight(140),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
